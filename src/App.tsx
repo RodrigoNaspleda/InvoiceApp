@@ -5,6 +5,7 @@ import { useTheme } from './context/theme-provider';
 import { NAVIGATION_PATHS } from './constants/navigation';
 
 import Home from './views/Home/Home';
+import InvoicesApp from './views/Invoices/invoices-app';
 
 function App() {
   const { theme } = useTheme();
@@ -19,13 +20,14 @@ function App() {
   }, [theme]);
 
   return (
-    <>
-      <Routes>
-        <Route element={`${/* Insert Navbar */ ''}`}>
-          <Route index path={NAVIGATION_PATHS.HOME_PATH} element={<Home />} />
-        </Route>
-      </Routes>
-    </>
+    <InvoicesApp />
+    //<>
+    //  <Routes>
+    //    <Route element={`${/* Insert Navbar */ ''}`}>
+    //      <Route index path={NAVIGATION_PATHS.HOME_PATH} element={<Home />} />
+    //    </Route>
+    //  </Routes>
+    //</>
   );
 }
 
